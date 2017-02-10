@@ -16,18 +16,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Demand Your Book", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Search", "Search", "Home")</li>
-                    <li>@Html.ActionLink(@Request.Cookies["username"].Value, "User", "Home")</li>
-                    <li>@Html.ActionLink("Logout", "SignIn", "Login", new { LoggedIn = "Yes"}, null)</li>
-                </ul>
-            </div>
+                @Html.ActionLink("Demand Your Book", "SignIn", "Login", new { area = "" }, new { @class = "navbar-brand" })
+            </div>           
         </div>
     </div>
     <div class="container body-content">

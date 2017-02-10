@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<BookWebApplication.Models.BookModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "SearchResults";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>SearchResults</h2>
 
 <table class="table">
     <tr>
@@ -25,13 +25,12 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Publisher)
-        </td>
-       
+        </td> 
         <td>
-            @Html.ActionLink("Details", "Details", "Home", new { BookID = item.ID } , null) |
-            @Html.ActionLink("Demand", "Demand", new { ID = item.ID,  Username = Request.Cookies["username"].Value })
+            @Html.ActionLink("Details", "Details", "Home", new { BookID = item.ID }, null) |
+            @Html.ActionLink("Demand", "Demand", new { ID = item.ID, Username = Request.Cookies["username"].Value })
         </td>
-    </tr>
+            </tr>
 }
-    
+
 </table>

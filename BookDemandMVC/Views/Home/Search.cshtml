@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Search</h2>
+    <h4>Enter Name of the publisher to search the books.</h4>
+<form method="get" action="@Url.Action("SearchResults", "Home")">
+   
+    @Html.Editor("Value", new { htmlAttributes = new { @class = "form-control", placeholder = "Search Value", required = "required" } })<br />
+    
+
+    @Html.RadioButton("Field", "0", true)Publisher<br />
+    @Html.RadioButton("Field", "1")Title <br />
+    @Html.RadioButton("Field", "2")ID <br />
+    <input type="Submit" value="Search" class="btn btn-primary" />
+</form>  
+
+
+
+    

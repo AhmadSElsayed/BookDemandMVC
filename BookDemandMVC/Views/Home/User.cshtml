@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BookDemandMVC.Models.DemandModel>
+
+@{
+    ViewBag.Title = "User Demands";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Request.Cookies["username"].Value</h2>
+<h4>User Demands</h4>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+    </tr>
+}
+
+</table>
